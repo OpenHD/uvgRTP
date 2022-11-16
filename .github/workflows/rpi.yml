@@ -27,6 +27,7 @@ jobs:
             ls -a
             mkdir build 
             cd build
+            apt install cmake
             cmake -DDISABLE_CRYPTO=1 ..
             mkdir UVGRTP-package
             sudo make DESTDIR=UVGRTP-package -j4 install
