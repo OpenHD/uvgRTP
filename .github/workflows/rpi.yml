@@ -27,7 +27,8 @@ jobs:
             ls -a
             mkdir build 
             cd build
-            apt install -y git cmake
+            apt install -y git cmake ruby-dev
+            gem install fpm
             git_hash=$(git rev-parse --short "$GITHUB_SHA")
             VERSION="2.2.2-evo-$(date '+%m%d%H%M')-${git_hash}"
             cmake -DDISABLE_CRYPTO=1 ..
